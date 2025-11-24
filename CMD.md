@@ -11,6 +11,7 @@ cd           → change directory
 cd..         → go back one folder
 md folder    → create folder (mkdir)
 rd folder    → delete folder (rmdir)
+type nul > filename.txt   → create file 
 del file.txt → delete file
 copy a b     → copy file
 move a b     → move file
