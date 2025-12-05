@@ -1,6 +1,4 @@
----
-
-# ✅ **BASH COMMANDS LIST (FULLY ORGANIZED)**
+#  **BASH COMMANDS LIST (FULLY ORGANIZED)**
 
 ## **1. File & Directory Commands**
 
@@ -27,7 +25,6 @@
 * `tail -f` – live log output
 
 ---
-
 ## **2. File Permissions / Ownership**
 
 * `chmod` – change permissions
