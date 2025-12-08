@@ -143,3 +143,36 @@ git bisect                          # Debug using binary search
 git blame <file>                    # Show who changed each line
 ```
 
+# A. Basic Commands:
+``
+git init: How do you initialize a new Git repository in an existing directory?
+git clone <repository-url>: How do you create a local copy of a remote repository?
+git add <file> / git add .: What is the purpose of git add, and how do you stage specific files or all changes?
+git commit -m "message": How do you commit staged changes to the repository with a descriptive message? 
+git status: How do you check the current state of your working directory and staging area?
+git log: How do you view the commit history of a branch?
+git push: How do you upload your local commits to a remote repository?
+git pull: How do you fetch changes from a remote repository and merge them into your current local branch?
+git fetch: What is the difference between git pull and git fetch? 
+git branch: How do you list, create, or delete branches?
+git checkout <branch-name> / git switch <branch-name>: How do you switch between branches?
+git merge <branch-name>: How do you integrate changes from one branch into another? 
+
+``
+# B. Intermediate Commands & Concepts:
+
+``
+git revert <commit-hash>: How do you undo a specific commit that has already been pushed, without rewriting history?
+git reset --hard <commit-hash> / --soft / --mixed: Explain the different modes of git reset and when to use them.
+git stash: How do you temporarily save changes in your working directory without committing them?
+git remote: How do you manage remote repositories?
+git config: How do you configure Git settings, such as user name and email?
+Merge Conflicts: What is a merge conflict, and how do you resolve it? 
+Advanced Commands & Scenarios:
+git rebase: Explain the concept of rebasing and its advantages/disadvantages compared to merging.
+git cherry-pick <commit-hash>: How do you apply a specific commit from one branch to another? 
+git reflog: What is git reflog and when is it useful?
+.gitignore: What is the purpose of the .gitignore file?
+Git Workflow: Describe a common Git workflow (e.g., Gitflow, Feature Branching).
+Hooks: What are Git hooks and how can they be used? 
+`` 
