@@ -184,3 +184,108 @@ git reflog: What is git reflog and when is it useful?
 
 Git Workflow: Describe a common Git workflow (e.g., Gitflow, Feature Branching).
 Hooks: What are Git hooks and how can they be used? 
+
+
+# D. Check this 
+# Git commands cheat-sheet
+
+## Configuration  
+git config --global user.name "Your Name"  
+    # Set the global Git username. :contentReference[oaicite:1]{index=1}  
+git config --global user.email "you@example.com"  
+    # Set the global Git email address. :contentReference[oaicite:2]{index=2}  
+
+## Starting / cloning a repository  
+git init  
+    # Initialize a new Git repository in the current directory. :contentReference[oaicite:3]{index=3}  
+git clone <repository-url>  
+    # Copy an existing remote repository (with all files/history) into a local directory. :contentReference[oaicite:4]{index=4}  
+
+## Checking repository status / staging changes  
+git status  
+    # Show the status of the working directory and the staging area — which files are changed, staged, or untracked. :contentReference[oaicite:5]{index=5}  
+git add <file>  
+    # Add a file (or files) from working directory to the staging area. Prepares them for commit. :contentReference[oaicite:6]{index=6}  
+git add .  
+    # Add all changed/ new/ deleted files to staging area. :contentReference[oaicite:7]{index=7}  
+
+## Creating commits  
+git commit -m "Your commit message"  
+    # Commit the staged changes to repository history, with a descriptive message. :contentReference[oaicite:8]{index=8}  
+git commit -a  
+(or git commit --all)  
+    # Automatically stage and commit all modified and deleted files (skips explicit git add). :contentReference[oaicite:9]{index=9}  
+
+## Viewing history / changes  
+git log  
+    # Show the commit history for the current branch. :contentReference[oaicite:10]{index=10}  
+git diff  
+    # Show differences between working directory, staging area, and last commit — or compare two commits. :contentReference[oaicite:11]{index=11}  
+
+## Branching and switching  
+git branch  
+    # List all branches in repository. Current branch is marked with `*`. :contentReference[oaicite:12]{index=12}  
+git branch <branch-name>  
+    # Create a new branch named <branch-name>. :contentReference[oaicite:13]{index=13}  
+git checkout <branch-name>  
+    # Switch to the specified branch (or commit); can also be used to restore files. :contentReference[oaicite:14]{index=14}  
+git checkout <old_branch> <new_branch> / git branch -m <old> <new>  
+    # Rename a branch. (alternative: git branch -m) :contentReference[oaicite:15]{index=15}  
+
+## Merging / integrating changes  
+git merge <branch-name>  
+    # Merge changes from specified branch into current branch. :contentReference[oaicite:16]{index=16}  
+git rebase <branch-or-commit>  
+    # Re-apply commits on top of another base commit/branch — helpful to keep history linear. :contentReference[oaicite:17]{index=17}  
+
+## Working with remote repositories  
+git push  
+    # Upload local commits to a remote repository (e.g. origin). :contentReference[oaicite:18]{index=18}  
+git pull  
+    # Fetch updates from remote repo and merge into current branch (fetch + merge). :contentReference[oaicite:19]{index=19}  
+git fetch  
+    # Retrieve updates from remote repository, but do not merge — allows you to review before merging. :contentReference[oaicite:20]{index=20}  
+
+## Undoing / cleaning / restoring  
+git revert <commit-hash>  
+    # Create a new commit that undoes changes introduced by the specified commit; does not rewrite history. :contentReference[oaicite:21]{index=21}  
+git reset --soft <commit>  
+    # Reset HEAD to specified commit, keeping changes in working directory (unstaged). :contentReference[oaicite:22]{index=22}  
+git reset --hard <commit>  
+    # Reset HEAD *and* working directory to specified commit — discards all changes after that commit. :contentReference[oaicite:23]{index=23}  
+
+git clean -fd  
+    # Remove untracked files and directories from working directory (clean up workspace). :contentReference[oaicite:24]{index=24}  
+
+## Stashing changes  
+git stash  
+    # Temporarily save (stash) uncommitted changes — both staged and unstaged — so working directory becomes clean. :contentReference[oaicite:25]{index=25}  
+git stash list  
+    # List all stashed states. :contentReference[oaicite:26]{index=26}  
+git stash apply  
+    # Re-apply a stash without removing it from stash history. :contentReference[oaicite:27]{index=27}  
+git stash pop  
+    # Re-apply the most recent stash and remove it from stash history. :contentReference[oaicite:28]{index=28}  
+git stash drop stash@{n}  
+    # Delete a specific stash from history. :contentReference[oaicite:29]{index=29}  
+
+## Tagging releases  
+git tag -a <tagname> -m "message"  
+    # Create an annotated tag pointing to current commit — useful for marking releases or versions. :contentReference[oaicite:30]{index=30}  
+git push origin <tagname>  
+    # Push the tagged commit to remote repository. :contentReference[oaicite:31]{index=31}  
+
+## Other useful commands  
+git rm <file>  
+    # Remove a file from working directory and staging area (so deletion is tracked). :contentReference[oaicite:32]{index=32}  
+git rm --cached <file>  
+    # Remove a file from tracking (staging area) but keep it in working directory. :contentReference[oaicite:33]{index=33}  
+
+git ls-files  
+    # List all files tracked by Git in the repository (staging + working directory). :contentReference[oaicite:34]{index=34}  
+
+git fetch --all  
+    # Fetch updates from all remotes (all branches) without merging. :contentReference[oaicite:35]{index=35}  
+
+git reflog  
+    # Show history of HEAD and branch updates — useful to recover lost commits or check past HEAD positions. :contentReference[oaicite:36]{index=36}  
